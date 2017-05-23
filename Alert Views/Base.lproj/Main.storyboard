@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alert_Views" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJt-SV-khX">
+                                <rect key="frame" x="75" y="46" width="238" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lR5-YP-Rzk">
+                                <rect key="frame" x="75" y="103" width="238" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password Again" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlB-uF-cC8">
+                                <rect key="frame" x="75" y="154" width="238" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJd-Y8-qS4">
+                                <rect key="frame" x="160" y="205" width="55" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="myButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ul4-qU-CWB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fJt-SV-khX" secondAttribute="trailing" constant="46" id="Dv5-cV-whA"/>
+                            <constraint firstItem="fJt-SV-khX" firstAttribute="leading" secondItem="lR5-YP-Rzk" secondAttribute="leading" id="ECb-U2-W4Q"/>
+                            <constraint firstItem="yJd-Y8-qS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F8e-vv-1xk"/>
+                            <constraint firstItem="lR5-YP-Rzk" firstAttribute="top" secondItem="fJt-SV-khX" secondAttribute="bottom" constant="27" id="LR3-kG-QHM"/>
+                            <constraint firstItem="DlB-uF-cC8" firstAttribute="top" secondItem="lR5-YP-Rzk" secondAttribute="bottom" constant="21" id="UR4-Il-NeP"/>
+                            <constraint firstItem="fJt-SV-khX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="V8b-pA-dn6"/>
+                            <constraint firstItem="lR5-YP-Rzk" firstAttribute="leading" secondItem="DlB-uF-cC8" secondAttribute="leading" id="fgL-Kt-gnU"/>
+                            <constraint firstItem="lR5-YP-Rzk" firstAttribute="trailing" secondItem="DlB-uF-cC8" secondAttribute="trailing" id="msz-tf-XsV"/>
+                            <constraint firstItem="fJt-SV-khX" firstAttribute="trailing" secondItem="lR5-YP-Rzk" secondAttribute="trailing" id="qnn-tp-4TG"/>
+                            <constraint firstItem="yJd-Y8-qS4" firstAttribute="top" secondItem="DlB-uF-cC8" secondAttribute="bottom" constant="21" id="wRW-wW-eZ9"/>
+                            <constraint firstItem="fJt-SV-khX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="yuN-fG-xjC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordAgainText" destination="DlB-uF-cC8" id="drY-nr-ip0"/>
+                        <outlet property="passwordText" destination="lR5-YP-Rzk" id="pgz-Sj-azu"/>
+                        <outlet property="userNameText" destination="fJt-SV-khX" id="43g-km-iaD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>
